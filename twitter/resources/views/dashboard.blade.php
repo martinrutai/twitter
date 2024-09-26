@@ -51,6 +51,7 @@
                     </div>
                 </div>
                 <hr>
+                @foreach ($users as $user)
                 <div class="mt-3">
                     <div class="card">
                         <div class="px-3 pt-4 pb-2">
@@ -59,7 +60,7 @@
                                     <img style="width:50px" class="me-2 avatar-sm rounded-circle"
                                         src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario" alt="Mario Avatar">
                                     <div>
-                                        <h5 class="card-title mb-0"><a href="#"> Mario
+                                        <h5 class="card-title mb-0"><a href="#"> {{$user["name"]}}
                                             </a></h5>
                                     </div>
                                 </div>
@@ -91,6 +92,7 @@
                                 </div>
 
                                 <hr>
+                                
                                 <div class="d-flex align-items-start">
                                     <img style="width:35px" class="me-2 avatar-sm rounded-circle"
                                         src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Luigi"
@@ -116,6 +118,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
             <div class="col-3">
                 <div class="card">
