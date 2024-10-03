@@ -2,18 +2,17 @@
 <html lang="EN">
 
 <head> {{-- tu includujem layouty--}}
-    @include('layout.head')
+    @include('included.head')
 </head>
 
 <body>
-    
-    @include('layout.nav')
-    
+    {{-- tu includujem navbar--}}
+    @include('included.nav')
     <div class="container py-4">
          @yield('content')
     </div>
 
-    @include('layout.footer')
+    @include('included.footer')
 
 </body>
 
