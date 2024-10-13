@@ -16,6 +16,6 @@ class IdeaController extends Controller
             'likes' => 36,
             'name' => 'Matko',
         ]);
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard')->with('success' , 'Idea was created successfully!');
     }
 }
