@@ -19,4 +19,4 @@ Route::put('/posts/{post}', [PostController::class,'update'])->name('posts.updat
 
 Route::delete('/posts/{post}', [PostController::class,'destroy'])->name('posts.destroy');
 
-Route::get('/posts/search', [PostController::class,'search'])->name('posts.search');
+Route::get('/posts/search', [PostController::class, 'search'])->name('posts.search');
