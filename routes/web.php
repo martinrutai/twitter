@@ -2,19 +2,21 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class,'index'])->name('dashboard');
 
 Route::get('/profile', [UserController::class,'index']);
 
-Route::post('/ideas', [IdeaController::class,'store'])->name('ideas.store');
+Route::post('/posts', [PostController::class,'store'])->name('posts.store');
 
-Route::get('/ideas/{idea}', [IdeaController::class,'show'])->name('ideas.show');
+Route::get('/posts/{post}', [PostController::class,'show'])->name('posts.show');
 
-Route::get('/ideas/{idea}/edit', [IdeaController::class,'edit'])->name('ideas.edit');
+Route::get('/posts/{post}/edit', [PostController::class,'edit'])->name('posts.edit');
 
-Route::put('/ideas/{idea}', [IdeaController::class,'update'])->name('ideas.update');
+Route::put('/posts/{post}', [PostController::class,'update'])->name('posts.update');
 
-Route::delete('/ideas/{idea}', [IdeaController::class,'destroy'])->name('ideas.destroy');
+Route::delete('/posts/{post}', [PostController::class,'destroy'])->name('posts.destroy');
+
+Route::get('/posts/search', [PostController::class,'search'])->name('posts.search');
