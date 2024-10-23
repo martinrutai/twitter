@@ -5,6 +5,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/posts/search', [PostController::class, 'search'])->name('posts.search');
+
 Route::get('/', [DashboardController::class,'index'])->name('dashboard');
 
 Route::get('/profile', [UserController::class,'index']);
@@ -18,5 +20,3 @@ Route::get('/posts/{post}/edit', [PostController::class,'edit'])->name('posts.ed
 Route::put('/posts/{post}', [PostController::class,'update'])->name('posts.update');
 
 Route::delete('/posts/{post}', [PostController::class,'destroy'])->name('posts.destroy');
-
-Route::get('/posts/search', [PostController::class, 'search'])->name('posts.search');

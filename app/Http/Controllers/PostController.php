@@ -52,8 +52,9 @@ class PostController extends Controller
         return redirect()->route('posts.show', $post->id)->with('success',"Post updated successfully");
     }
     
-    public function search() {
-        $content = request()->get('content', 'nevydalo');
+    public function search(Request $request) {
+
+        $content = request()->get('content', '');
 
         $post = Post::where('content', 'LIKE', '%'. $content . '%')->first();
 
