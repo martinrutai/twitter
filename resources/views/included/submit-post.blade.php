@@ -5,7 +5,7 @@
         <div class="mb-3">
             <textarea name="content" class="form-control" id="content" rows="3"></textarea>
             @error('content')
-                <span class="fs-6 text-danger">{{ $message}}</span>
+                <span class="fs-6 text-danger">{{ $message }}</span>
             @enderror
         </div>
         <div class="">
