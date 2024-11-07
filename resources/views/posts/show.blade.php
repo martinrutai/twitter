@@ -39,7 +39,9 @@
             <div class="col-6">
                 @include('included.success-message')
                 <hr>  
-                    @include('included.post-card')
+                @foreach ($singlePost as $singlePost)
+                    @include('included.post-card')  
+                @endforeach
             </div>
             <div class="col-3">
                 @include('included.search')

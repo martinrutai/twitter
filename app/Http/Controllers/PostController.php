@@ -31,9 +31,10 @@ class PostController extends Controller
         return redirect()->route('dashboard')->with('success' , 'Post deleted successfully!');
     }
 
-    public function show(Post $post) { //single idei
+    public function show(Post $singlePost) { //single idei
+        
         return view('posts.show', [
-            'post' => $post
+            'singlePost' => $singlePost
         ]);
     }
 
@@ -51,7 +52,7 @@ class PostController extends Controller
         $post->save();
         return redirect()->route('posts.show', $post->id)->with('success',"Post updated successfully");
     }
-    
+
     public function search(Request $request) {
 
         $content = request()->get('content', '');
