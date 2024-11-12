@@ -1,6 +1,6 @@
 
 <div>
-    <form action="{{route('comments.store', $singlePost->id)}}" method="POST">
+    <form action="{{route('comments.store', $post->id)}}" method="POST">
         @csrf
         <div class="mb-3">
             <textarea name="content" id="content" class="fs-6 form-control" rows="1"></textarea>
@@ -12,7 +12,7 @@
 
     <hr>
     
-    @foreach ($singlePost->comments as $comment)    
+    @foreach ($post->comments as $comment)    
         <div class="d-flex align-items-start">
             <img style="width:35px" class="me-2 avatar-sm rounded-circle"
             src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Luigi"

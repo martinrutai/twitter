@@ -40,7 +40,7 @@
                 @include('included.success-message')
                 @include('included.submit-post')
                 <hr>
-                @foreach ($posts as $singlePost)
+                @foreach ($posts as $post)
                     @include('included.post-card')
                 @endforeach
                 <div class="mt-3">
